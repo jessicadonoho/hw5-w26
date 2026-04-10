@@ -1,4 +1,6 @@
 var video;
+const slider= document.querySelector("#slider")
+const volumeText = document.querySelector("#volume")
 
 window.addEventListener("load", function() {
 	console.log("Good job opening the window");
@@ -7,10 +9,10 @@ window.addEventListener("load", function() {
 	console.log("Auto play is set to false")
 	video.loop=false;
 	console.log("Loop is set to false")
+	slider.value=100
 });
 
-const slider= document.querySelector("#slider")
-const volumeText = document.querySelector("#volume")
+
 
 document.querySelector("#play").addEventListener("click", function() {
 	video.play();
