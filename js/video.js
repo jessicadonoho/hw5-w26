@@ -14,9 +14,8 @@ const volumeText = document.querySelector("#volume")
 
 document.querySelector("#play").addEventListener("click", function() {
 	video.play();
-	video.volume=1;
-	slider.value=100
-	volumeText.textContent="100%"
+	video.volume=slider.value/100;
+	volumeText.textContent=`${slider.value}%`
 	console.log("Play Video")
 });
 
@@ -68,11 +67,14 @@ slider.addEventListener("change", (e)=>{
 })
 
 document.querySelector("#vintage").addEventListener("click", function(){
-	video.style.filter="grayscale(1)"
+	// video.style.filter="grayscale(1)"
+	video.classList.add("oldSchool")
 })
 
 document.querySelector("#orig").addEventListener("click", function(){
-	video.style.filter="grayscale(0)"
+	// video.style.filter="grayscale(0)"
+	video.classList.remove("oldSchool")
+
 })
 
 
